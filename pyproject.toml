@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytestforge"
+version = "0.2.1"
+description = "AST-driven Python static analyzer and automated pytest suite generator powered by OpenAI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["ast", "pytest", "openai", "unit-testing", "static-analysis", "cli"]
+dependencies = [
+    "openai>=1.50.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+pytestforge = "pytestforge:main"
